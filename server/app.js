@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
+const path = require('path');
 
 // Middleware Setup 
 app.use(bodyParser.json());
@@ -14,13 +15,18 @@ app.use(cors({
 
 const chatRoutes = require('./routes/chat');
 app.use('/', chatRoutes);
-  
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+// route not-found => could be a React route => render the SPA
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, 'client/build/index.html'), function (err) {
+    if (err) {
+      next(err)
+    }
+  })
 });
+
 
   // Server Started
   app.listen(5000, () => {
