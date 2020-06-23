@@ -1,0 +1,73 @@
+*, :before, :after {box-sizing:border-box;}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family:'Montserrat', sans-serif;
+}
+
+.chat {
+  width: 420px;
+  height: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  margin-top: 8%;
+  position: relative;
+  background-color: #edecec;
+  overflow: auto;
+}
+
+.bubble {
+  width: 340px;
+  height: 36px;
+  border: none;
+  border-radius: 20px;
+  outline: none
+}
+
+.btn {
+  width: 35px;
+  height: 35px;
+  margin-left: 8px;
+  outline: none
+}
+.inputs {
+  display: flex; 
+  justify-content: space-around;
+  position: absolute; 
+  bottom: 10px;
+  left: 20px;
+}
+.userResponse {
+  width: 220px;
+  height: 37px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 2px 15px;
+  margin-left: 15px;
+}
+
+.genderBtn {
+  border: 1.2px solid #4d9d75; 
+  background-color: white;
+  margin-right: 8px;
+  color: #4d9d75;
+  font-weight: 800;
+  width: 70px;
+  height: 30px;
+  border-radius: 17px;
+  outline: none
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}
