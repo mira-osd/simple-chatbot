@@ -3,8 +3,6 @@ const cors = require('cors');
 const app = express();
 const path = require('path');
 
-const port = process.env.PORT || 5000;
-
 app.use(cors({
   credentials: true,
   origin: ['http://localhost:3000']
@@ -26,8 +24,8 @@ app.use((req, res, next) => {
 
 
   // Server Started
-  app.listen(port, () => {
-    console.log(`Chatbot listening on http://localhost:${port}`);
-  });
+  // app.listen(port, () => {
+  //   console.log(`Chatbot listening on http://localhost:${port}`);
+  // });
 
 module.exports = app;
