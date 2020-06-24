@@ -3,6 +3,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const path = require('path');
+const http = require('http');
+let server = http.createServer(app);
+
+const port = process.env.PORT || 5000;
 
 // Middleware Setup 
 app.use(bodyParser.json());
@@ -29,8 +33,8 @@ app.use((req, res, next) => {
 
 
   // Server Started
-  app.listen(5000, () => {
-    console.log(`Chatbot listening on http://localhost:${5000}`);
+  server.listen(port, () => {
+    console.log(`Chatbot listening on http://localhost:${port}`);
   });
 
 module.exports = app;

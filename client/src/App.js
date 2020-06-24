@@ -27,7 +27,7 @@ class App extends React.Component {
     this.setState({fullAnswers :  FA});
     let fullAnswersb64 = Buffer.from(JSON.stringify(FA), 'ascii').toString('base64');
      
-    axios.get(`http://localhost:5000/?step=`+this.state.currentStep+'&answer='+answer+'&fullAnswers='+fullAnswersb64, {
+    axios.get(`${process.env.REACT_APP_APIURL || ""}/?step=`+this.state.currentStep+'&answer='+answer+'&fullAnswers='+fullAnswersb64, {
       headers: {
         'Access-Control-Allow-Origin': '*',
     }})
