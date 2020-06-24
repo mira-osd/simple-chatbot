@@ -14,6 +14,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
+    "start": "REACT_APP_APIURL=http://localhost:5000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
