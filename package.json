@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/mira-osd/simple-chatbot/issues"
   },
+  "engines": {
+    "node": "12.13.1"
+  },
   "homepage": "https://github.com/mira-osd/simple-chatbot#readme"
 }
