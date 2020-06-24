@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const moment = require('moment');
-const Buffer = require('buffer/').Buffer;
 
 router.get('/', function(req, res) {
     step = Number(req.query.step);
