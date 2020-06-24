@@ -59,20 +59,19 @@ class App extends React.Component {
     return (
       <div className="chat">
         {this.state.messages.map((item, i) => (
-          // à modifier
-          <Response key={i} type={item.type} msg={item.data} className={`${item.type === 'bot' ? "red" : "black"}`}/>
+          <Response key={i} type={item.type} msg={item.data}/>
         ))}
         {this.state.currentQuestion.type === 'multiple' &&
           this.state.currentQuestion.possibility.map((choice, i) => (
-            <button className="genderBtn" key={i} onClick={() => {this.getStep(choice)}}>  
-              {choice}
-            </button>                      
+              <button className="genderBtn" key={i} onClick={() => {this.getStep(choice)}}>  
+                {choice}
+              </button>                   
         ))}
         {
           <form onSubmit={this.sendAnswer}>
-            <div class="inputs">
+            <div className="inputs">
             <input className="bubble" placeholder="Écrivez votre message..." type="text" value={this.state.answer || ""} onChange={this.changeAnswer} /> 
-            <input class="btn" type="image" value="Envoyer" src="/send.png" alt="envoyer"/>   
+            <input className="btn" type="image" value="Envoyer" src="/send.png" alt="envoyer"/>   
             </div>
           </form>                  
         }                  

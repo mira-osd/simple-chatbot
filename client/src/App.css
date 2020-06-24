@@ -17,7 +17,8 @@ body {
   border-radius: 30px;
   margin-top: 8%;
   position: relative;
-  background-color: #edecec;
+  background-color: #f9f9f9;
+  box-shadow: 1px 1px 1px 2px #ccc;
   overflow: auto;
 }
 
@@ -42,20 +43,35 @@ body {
   bottom: 10px;
   left: 20px;
 }
-.userResponse {
-  width: 220px;
-  height: 37px;
+.botResponse {
+  width: 230px;
+  background-color: #b3b4b4;
+  color: white;
+  height: 45px;
   font-size: 13px;
   font-weight: 600;
   border-radius: 20px;
-  padding: 2px 15px;
+  padding: 5px 15px;
   margin-left: 15px;
+}
+
+.userResponse {
+  width: 230px;
+  background-color: #4d9d75;
+  color: white;
+  height: 45px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-left: 160px;
+  justify-content: flex-end;
 }
 
 .genderBtn {
   border: 1.2px solid #4d9d75; 
   background-color: white;
-  margin-right: 8px;
+  margin-left: 15px;
   color: #4d9d75;
   font-weight: 800;
   width: 70px;
@@ -64,10 +80,6 @@ body {
   outline: none
 }
 
-.red {
-  background-color: red;
-}
-
-.black {
-  background-color: black;
+.alignChat{
+  display: flex;
 }
